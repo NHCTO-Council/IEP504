@@ -1,0 +1,14 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+    "solution": {
+        "name": "Axis-IEP504-Document-Solution",
+        "id": "abbbf170-3d5e-4527-ad1a-382941f3ce6d",
+        "version": "1.6.0.0",
+        "includeClientSideAssets": true,
+        "skipFeatureDeployment": true,
+        "isDomainIsolated": false
+    },
+    "paths": {
+        "zippedPackage": "solution/axis-iep-504-document-ui.sppkg"
+    }
+}

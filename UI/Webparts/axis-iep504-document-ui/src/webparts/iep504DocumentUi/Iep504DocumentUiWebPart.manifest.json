@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "15cfa90c-27e1-420c-984d-1cc164e0100a",
+  "alias": "Iep504DocumentUiWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "preconfiguredEntries": [
+    {
+      "groupId": "9ece8cca-97c2-4f9c-ba75-c864fa5254e2",
+      "group": {
+        "default": "IEP/504"
+      },
+      "title": {
+        "default": "Document Dashboard"
+      },
+      "description": {
+        "default": "Use this web part to display status information for the IEP/504 Document Storage Library."
+      },
+      "iconImageUrl": "data:image/png;base64,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",
+      "properties": {
+        "docLibraryName": "Documents",
+        "auditListName": "IEP 504 Audit Logs",
+        "uiMode": "Manager",
+        "treatPreviewAsRead": false,
+        "allowExport": false,
+        "debugMode": false
+      }
+    }
+  ]
+}

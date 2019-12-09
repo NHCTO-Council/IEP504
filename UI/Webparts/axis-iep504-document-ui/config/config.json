@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "iep-504-document-ui-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/iep504DocumentUi/Iep504DocumentUiWebPart.js",
+          "manifest": "./src/webparts/iep504DocumentUi/Iep504DocumentUiWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery": "https://code.jquery.com/jquery-1.12.4.min.js",
+    "tabulator-tables": "https://unpkg.com/tabulator-tables@4.1.3/dist/js/tabulator.min.js"
+  },
+  "localizedResources": {
+    "Iep504DocumentUiWebPartStrings": "lib/webparts/iep504DocumentUi/loc/{locale}.js"
+  }
+}
