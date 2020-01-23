@@ -5,9 +5,8 @@
 .SYNOPSIS
   IEP/504 Document Processing Function Library
 .NOTES
-  Version:        4.0.190919
-  Author:         Jeremy M. Morel, Axis Business Solutions, Ltd
-  Creation Date:  8/31/2018
+  
+  Creation Date:  1-23-2020
 
   Change log:
   07/31/2019 - Updated date range logic to use simpler function, improve performance.
@@ -21,6 +20,7 @@
   09/10/2019 - Revised routines which add Teachers to the library column and grant item permission.  This resolves an issue with a dependency due to deferred update.
   09/16/2019 - Ensured trimming of white space when inspecting student ID numbers from the dropbox.
   09/19/2019 - Resolved issue with Grant-ItemPermission function that will enable the process to still process a permission update by falling back to the name if the email is invalid.
+  01/23/2020 - Updated function Get-SharePointUser to match names rather than search for names. This resolves issues when usernames are similar (jdoe vs jbdoe)
 #>
 
 #region Core Utility Functions =============================================
@@ -230,11 +230,11 @@ function Get-SharePointUser
        if ($userName -eq $config.unknownUserId){ $user = (Get-PNPUser | Where-Object LoginName -match $config.unknownUserId) }
        else
        {
-        $safeUser = (Get-PNPUser | Where-Object LoginName -match $userName);
+        $safeUser = (Get-PNPUser | ? Email -EQ $userName);
         if (!$safeUser)
         {
           # Couldn't match on a LoginName. Try e-mail.
-          $safeUser = (Get-PNPUser | Where-Object Email -match $userName);
+          $safeUser = (Get-PNPUser | Where-Object LoginName -match $userName);
         }
         if (!$safeUser)
         {
