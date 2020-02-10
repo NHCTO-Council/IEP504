@@ -16,5 +16,5 @@ TODO: Describe and show how to build your code and run the tests.
 TODO: Explain how other users and developers can contribute to make your code better. 
 -->
 # <b>Contact</b>
-Jeremy Morel <br>
-jmorel@axisbusiness.com <br>
+Kyle Hancock<br>
+khancock@nhcto.org <br>
