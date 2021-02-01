@@ -1,6 +1,6 @@
 # <b>Introduction</b>
 This Project contains various components related to the Education Plan Document Management Solution (IEP-504)
-for SharePoint. This project is currently maintained by Axis Business Solutions.
+for SharePoint.
 <!--
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
